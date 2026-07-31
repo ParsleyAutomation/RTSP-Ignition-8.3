@@ -7,6 +7,10 @@ converter turns each camera's RTSP feed into browser-friendly video and plays it
 This repo distributes the **free, limited edition** (up to **6 camera feeds**). Paid tiers lift
 the limit — see [Editions](#editions).
 
+![Live camera wall in a Perspective session](images/camera-wall.png)
+
+*A camera wall running live in a browser Perspective session.*
+
 ---
 
 ## Download
@@ -41,10 +45,16 @@ Subject: CN=Central Valley Ignition, O=Central Valley Ignition, L=Fresno, S=CA, 
 3. Save. Camera URLs/credentials stay on the Gateway — never sent to a browser.
 4. Free edition allows **6 enabled cameras**; the 7th is blocked until you upgrade.
 
+![RTSP Cameras config page with the license tier](images/gateway-config.png)
+
 ## Add the wall (Designer)
 1. Open a **Perspective** view.
 2. From the **Central Valley Ignition** palette category, drag **RTSP Camera Grid** onto the view.
 3. Leave `cameras` empty to show all, or list cameras by **name**. Save and open a Session.
+
+*In the Designer, tiles show a placeholder — live video only renders in a browser Session:*
+
+![RTSP Camera Grid in the Ignition Designer](images/designer-preview.png)
 
 Full guide: **[HOWTO.pdf](https://github.com/CVISupport/RTSP/releases)** (attached to the release).
 
