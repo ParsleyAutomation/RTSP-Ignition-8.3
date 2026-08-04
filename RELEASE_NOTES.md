@@ -2,13 +2,16 @@
 
 Native live IP-camera **RTSP** viewing inside **Ignition Perspective**. Configure cameras on the
 Gateway, drop the **RTSP Camera Grid** component into a view, and you have a live camera wall — no
-browser plugins, no extra ports, credentials never leave the Gateway.
+browser plugins, credentials never leave the Gateway.
 
 **Free Edition — up to 6 camera feeds.** Perpetual, no time limit.
 
 ## Highlights
-- **Any RTSP camera** (H.264). Gateway converts RTSP → HLS and reverse-proxies it over the
-  Gateway's own web port (TLS + auth, no extra ports).
+- **Any RTSP camera** (H.264), delivered two ways:
+  - **HLS** (default) — reverse-proxied over the Gateway's own web port (TLS + auth, **no extra
+    ports**), works anywhere the Gateway is reachable, a few seconds behind live.
+  - **WebRTC** (optional) — **under a second** of latency for same-network viewers. Video goes
+    direct over a UDP port; a tile that can't get through falls back to HLS on its own.
 - **Camera wall component** — Grid / Single / 2-Up / Quad / Hero layouts, rotation, patrol tours,
   bindable full-screen focus + picture-in-picture.
 - **Self-healing feeds** — a frozen or choppy tile auto-recovers without a page refresh; long
@@ -20,12 +23,15 @@ browser plugins, no extra ports, credentials never leave the Gateway.
 - Ignition **8.3+**
 - Cameras providing an **H.264** RTSP stream (switch H.265 cameras to H.264)
 - View the wall in a normal browser (Chrome/Edge) — Perspective Workstation lacks the H.264 codec
+- *For the optional WebRTC mode:* viewers on the same network as the Gateway
 
 ## Install
 1. Gateway → **Config → Modules → Install or Upgrade a Module…** → choose the `.modl`.
 2. This build is **self-signed** — accept the one-time certificate prompt (verify the fingerprint
    in the README).
-3. Configure cameras under **Config → Connections → RTSP Cameras**, then add **RTSP Camera Grid**
+3. **Restart the Gateway** — on Ignition 8.3+ a module install or upgrade only takes effect after a
+   restart.
+4. Configure cameras under **Config → Connections → RTSP Cameras**, then add **RTSP Camera Grid**
    to a Perspective view.
 
 Full walkthrough: **HOWTO.pdf** (attached below).
