@@ -29,7 +29,8 @@ Subject: CN=Central Valley Ignition, O=Central Valley Ignition, L=Fresno, S=CA, 
 ---
 
 ## Requirements
-- **Ignition 8.3+**
+- **Ignition 8.3+** — standard, **Maker Edition**, or unlicensed trial mode. *(Edge is not supported —
+  IA requires Edge modules to be whitelisted.)*
 - Cameras providing an **H.264** RTSP stream (H.265 must be switched to H.264 on the camera)
 - View the camera wall in a normal browser (Chrome/Edge). *Perspective Workstation lacks the
   H.264 codec — use a browser.*
