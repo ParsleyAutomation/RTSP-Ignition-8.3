@@ -104,7 +104,7 @@ addresses browsers will be told to use and includes a **Test from this browser**
 |---------|-------------|-------|
 | **Free** | 6 | This download. Perpetual. |
 | **Pro** | 24 | Single gateway. |
-| **Unlimited** | Unlimited | Single gateway, scales to 100+ feeds. |
+| **Unlimited** | Unlimited | Single gateway. Capacity depends on your hardware. |
 | **Integrator** | Unlimited | Multi-gateway + resale/OEM. |
 
 Upgrading is a license key — no reinstall. **[Contact us](#support)** with your Gateway ID
