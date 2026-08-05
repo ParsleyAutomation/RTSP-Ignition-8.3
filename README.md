@@ -71,7 +71,7 @@ Full guide: **[HOWTO.pdf](https://github.com/CVISupport/RTSP/releases)** (attach
 
 By default the wall uses **HLS**, roughly **2–6 seconds** behind live — fine for monitoring, not for
 someone reacting to what they see. Switching the grid's `transport` property to `webrtc` drops that to
-**under a second** and removes the drift that accumulates over a long shift.
+**under a second**
 
 What it costs you:
 
