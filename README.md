@@ -1,8 +1,9 @@
 # RTSP Viewer for Ignition — Free Edition
 
-View live IP-camera **RTSP** streams natively in **Ignition Perspective**. A gateway-managed
-converter turns each camera's RTSP feed into browser-friendly video and plays it in an
-**RTSP Camera Grid** component — no browser plugins.
+View live IP-camera **RTSP** streams natively in **Ignition Perspective**. A gateway-managed relay
+repackages each camera's existing stream for the browser — **without re-encoding it** — and plays it
+in an **RTSP Camera Grid** component. No browser plugins, and no transcoding, so image quality is
+untouched and a wall of cameras costs the Gateway very little.
 
 This repo distributes the **free, limited edition** (up to **6 camera feeds**). Paid tiers lift
 the limit — see [Editions](#editions).
@@ -37,8 +38,8 @@ Subject: CN=Central Valley Ignition, O=Central Valley Ignition, L=Fresno, S=CA, 
 - **Ignition 8.3+** — standard, **Maker Edition**, or unlicensed trial mode. *(Edge is not supported —
   IA requires Edge modules to be whitelisted.)*
 - Cameras providing an **H.264** RTSP stream (H.265 must be switched to H.264 on the camera)
-- View the camera wall in a normal browser (Chrome/Edge). *Perspective Workstation lacks the
-  H.264 codec — use a browser.*
+- View the camera wall in a normal browser (Chrome/Edge). *Perspective Workstation does not play
+  H.264 out of the box — use a browser.*
 
 ## Install (Gateway)
 1. Gateway web UI → **Config → Modules** → **Install or Upgrade a Module…**

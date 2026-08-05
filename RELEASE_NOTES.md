@@ -22,7 +22,7 @@ browser plugins, credentials never leave the Gateway.
 ## Requirements
 - Ignition **8.3+**
 - Cameras providing an **H.264** RTSP stream (switch H.265 cameras to H.264)
-- View the wall in a normal browser (Chrome/Edge) — Perspective Workstation lacks the H.264 codec
+- View the wall in a normal browser (Chrome/Edge) — Perspective Workstation does not play H.264 out of the box
 - *For the optional WebRTC mode:* viewers on the same network as the Gateway
 
 ## Install
