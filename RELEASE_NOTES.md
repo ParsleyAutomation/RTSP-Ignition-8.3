@@ -1,8 +1,8 @@
 # RTSP Viewer for Ignition — Free Edition
 
 Native live IP-camera **RTSP** viewing inside **Ignition Perspective**. Configure cameras on the
-Gateway, drop the **RTSP Camera Grid** component into a view, and you have a live camera wall — no
-browser plugins, credentials never leave the Gateway.
+Gateway, drop the **RTSP Camera Grid** component into a view, and you have live cameras on screen —
+one or many — with no browser plugins, and credentials that never leave the Gateway.
 
 **Free Edition — up to 6 camera feeds.** Perpetual, no time limit.
 
@@ -12,7 +12,7 @@ browser plugins, credentials never leave the Gateway.
     ports**), works anywhere the Gateway is reachable, a few seconds behind live.
   - **WebRTC** (optional) — **under a second** of latency for same-network viewers. Video goes
     direct over a UDP port; a tile that can't get through falls back to HLS on its own.
-- **Camera wall component** — Grid / Single / 2-Up / Quad / Hero layouts, rotation, patrol tours,
+- **RTSP Camera Grid component** — Grid / Single / 2-Up / Quad / Hero layouts, rotation, patrol tours,
   bindable full-screen focus + picture-in-picture.
 - **Self-healing feeds** — a frozen or choppy tile auto-recovers without a page refresh; long
   kiosk sessions stay live.
@@ -22,7 +22,9 @@ browser plugins, credentials never leave the Gateway.
 ## Requirements
 - Ignition **8.3+**
 - Cameras providing an **H.264** RTSP stream (switch H.265 cameras to H.264)
-- View the wall in a normal browser (Chrome/Edge) — Perspective Workstation does not play H.264 out of the box
+- View camera feeds in a normal browser (Chrome/Edge) — the supported configuration. Perspective
+  Workstation can display them too, but does not play H.264 out of the box; see the README section
+  **Perspective Workstation** for what that involves and who is responsible for licensing it.
 - *For the optional WebRTC mode:* viewers on the same network as the Gateway
 
 ## Install

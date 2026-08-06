@@ -3,7 +3,7 @@
 View live IP-camera **RTSP** streams natively in **Ignition Perspective**. A gateway-managed relay
 repackages each camera's existing stream for the browser — **without re-encoding it** — and plays it
 in an **RTSP Camera Grid** component. No browser plugins, and no transcoding, so image quality is
-untouched and a wall of cameras costs the Gateway very little.
+untouched and a screen full of cameras costs the Gateway very little.
 
 This repo distributes the **free, limited edition** (up to **6 camera feeds**). Paid tiers lift
 the limit — see [Editions](#editions).
@@ -38,8 +38,9 @@ Subject: CN=Central Valley Ignition, O=Central Valley Ignition, L=Fresno, S=CA, 
 - **Ignition 8.3+** — standard, **Maker Edition**, or unlicensed trial mode. *(Edge is not supported —
   IA requires Edge modules to be whitelisted.)*
 - Cameras providing an **H.264** RTSP stream (H.265 must be switched to H.264 on the camera)
-- View the camera wall in a normal browser (Chrome/Edge). *Perspective Workstation does not play
-  H.264 out of the box — use a browser.*
+- View camera feeds in a normal **browser** (Chrome/Edge) — this is the supported configuration.
+  **Perspective Workstation** can also display them, but does not play H.264 out of the box; see
+  [Perspective Workstation](#perspective-workstation) below.
 
 ## Install (Gateway)
 1. Gateway web UI → **Config → Modules** → **Install or Upgrade a Module…**
@@ -55,7 +56,7 @@ Subject: CN=Central Valley Ignition, O=Central Valley Ignition, L=Fresno, S=CA, 
 
 ![RTSP Cameras config page with the license tier](images/gateway-config.png)
 
-## Add the wall (Designer)
+## Add the component (Designer)
 1. Open a **Perspective** view.
 2. From the **Central Valley Ignition** palette category, drag **RTSP Camera Grid** onto the view.
 3. Leave `cameras` empty to show all, or list cameras by **name**. Save and open a Session.
@@ -70,7 +71,7 @@ Full guide: **[HOWTO.pdf](https://github.com/CVISupport/RTSP/releases)** (attach
 
 ## Low-latency mode (WebRTC)
 
-By default the wall uses **HLS**, roughly **2–6 seconds** behind live — fine for monitoring, not for
+By default the component uses **HLS**, roughly **2–6 seconds** behind live — fine for monitoring, not for
 someone reacting to what they see. Switching the grid's `transport` property to `webrtc` drops that to
 **under a second**.
 
@@ -95,6 +96,43 @@ addresses browsers will be told to use and includes a **Test from this browser**
 
 > **Free while in preview.** Low-latency mode is included at no cost in this release. It may move to a
 > paid tier in a future version; existing installs will be given notice.
+
+---
+
+## Perspective Workstation
+
+RTSP Viewer works in Perspective Workstation, but **not by default**.
+
+Workstation's embedded browser ships with H.264 playback **disabled**. Until it is enabled, camera
+tiles stay black while the rest of the view renders normally — whether the view holds one camera or
+twenty. Enabling it is a change you make to your own Workstation installation: a JVM flag in
+Workstation's launcher config. It is off in a stock install, and neither Central Valley Ignition nor
+this module turns it on for you.
+
+### What this module does and does not do
+
+- It **does not** contain, install, bundle, or distribute an H.264 decoder or any other codec.
+- It **does not** transcode or re-encode video. Frames are relayed from your camera to your browser
+  exactly as the camera produced them.
+- It **does not** modify Ignition, Workstation, or any Inductive Automation software.
+- The decoder used in Workstation is part of Workstation, not part of this module.
+
+### Your responsibility
+
+Decoding H.264 can carry patent-licensing obligations, depending on your jurisdiction, your
+deployment, and how you use it. If you enable H.264 playback in Workstation, **you are responsible for
+determining and meeting any licensing obligations that apply to you**, including any AVC/H.264
+patent-pool terms. Central Valley Ignition provides no license, sublicense, or indemnity for H.264
+decoding.
+
+### Support
+
+The supported configuration for RTSP Viewer is a standard browser. Workstation with H.264 enabled is
+**unsupported and best-effort**. The flag is not documented by Inductive Automation, is not part of
+any agreement between CVI and IA, and may change or stop working in any Ignition release.
+Central Valley Ignition is not affiliated with or endorsed by Inductive Automation.
+
+None of the above is legal advice. Consult your own counsel.
 
 ---
 
