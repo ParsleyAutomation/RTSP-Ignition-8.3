@@ -125,15 +125,6 @@ determining and meeting any licensing obligations that apply to you**, including
 patent-pool terms. Central Valley Ignition provides no license, sublicense, or indemnity for H.264
 decoding.
 
-### Support
-
-The supported configuration for RTSP Viewer is a standard browser. Workstation with H.264 enabled is
-**unsupported and best-effort**. The flag is not documented by Inductive Automation, is not part of
-any agreement between CVI and IA, and may change or stop working in any Ignition release.
-Central Valley Ignition is not affiliated with or endorsed by Inductive Automation.
-
-None of the above is legal advice. Consult your own counsel.
-
 ---
 
 ## Editions
