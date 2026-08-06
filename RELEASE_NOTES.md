@@ -18,6 +18,8 @@ one or many — with no browser plugins, and credentials that never leave the Ga
   kiosk sessions stay live.
 - **UniFi Protect extras** (optional) — auto stream-restart and camera reboot when a feed degrades,
   plus a manual per-camera Reboot button.
+- **Upgrade by license key** — paste it into the License card. Validated offline on the Gateway, so
+  no internet and no reinstall.
 
 ## Requirements
 - Ignition **8.3+**
