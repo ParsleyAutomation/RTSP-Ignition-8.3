@@ -21,7 +21,7 @@ the **same network**. See [Low-latency mode](#low-latency-mode-webrtc).
 
 ## Download
 
-Get the latest `.modl` from the **[Releases](https://github.com/CVISupport/RTSP/releases)** page.
+Get the latest `.modl` from the **[Releases](https://github.com/CVISupport/RTSP-Ignition-8.3/releases)** page.
 
 > This build is **self-signed**. On install, the Gateway shows a one-time certificate prompt —
 > review the fingerprint below and accept it. Nothing else is affected.
@@ -34,19 +34,9 @@ Subject: CN=Central Valley Ignition, O=Central Valley Ignition, L=Fresno, S=CA, 
 
 ---
 
-## Running Ignition 8.1?
-
-This repo is the **Ignition 8.3+** build. For **Ignition 8.1**, use the separate build at
-**[CVISupport/RTSP-Ignition-8.1](https://github.com/CVISupport/RTSP-Ignition-8.1)**.
-
-Same product, same component, same license keys — a Gateway runs one or the other, and installing the
-wrong one is harmless (it refuses to start and says so in the Gateway log). Perspective views built on
-one edition open unchanged on the other.
-
 ## Requirements
 - **Ignition 8.3+** — standard, **Maker Edition**, or unlicensed trial mode. *(Edge is not supported —
-  IA requires Edge modules to be whitelisted.)* For 8.1, see
-  [Running Ignition 8.1?](#running-ignition-81) above.
+  IA requires Edge modules to be whitelisted.)*
 - Cameras providing an **H.264** RTSP stream (H.265 must be switched to H.264 on the camera)
 - View camera feeds in a normal **browser** (Chrome/Edge) — this is the supported configuration.
   **Perspective Workstation** can also display them, but does not play H.264 out of the box; see
@@ -55,7 +45,7 @@ one edition open unchanged on the other.
 ## Install (Gateway)
 1. Gateway web UI → **Config → Modules** → **Install or Upgrade a Module…**
 2. Choose the downloaded `.modl` → **Install** → accept the certificate prompt once.
-3. **Restart the Gateway** — on Ignition 8.3+ a module install or upgrade only takes effect after a
+3. **Restart the Gateway** — on Ignition **8.3+** a module install or upgrade only takes effect after a
    restart. The module then shows **Running** under Config → Modules.
 
 ## Add cameras (Gateway)
@@ -75,7 +65,7 @@ one edition open unchanged on the other.
 
 ![RTSP Camera Grid in the Ignition Designer](images/designer-preview.png)
 
-Full guide: **[HOWTO.pdf](https://github.com/CVISupport/RTSP/releases)** (attached to the release).
+Full guide: **[HOWTO.pdf](https://github.com/CVISupport/RTSP-Ignition-8.3/releases)** (attached to the release).
 
 ---
 
@@ -150,7 +140,7 @@ Upgrading is a license key — no reinstall. **[Contact us](#support)** with you
 (shown on the License card in the config page) to purchase.
 
 ## Support
-- Issues / questions: open an **[Issue](https://github.com/CVISupport/RTSP/issues)** or email **Support@CentralValleyIgnition.com**.
+- Issues / questions: open an **[Issue](https://github.com/CVISupport/RTSP-Ignition-8.3/issues)** or email **Support@CentralValleyIgnition.com**.
 - Include your Ignition version and, for camera problems, the camera make/model + stream codec.
 
 ## License
