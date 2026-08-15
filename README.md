@@ -1,11 +1,17 @@
-# RTSP Viewer for Ignition — Free Edition
+# RTSP Viewer for Ignition 8.3 — Free Edition
+
+> **This is the Ignition 8.3+ build.** Running **Ignition 8.1**? Use
+> **[CVISupport/RTSP-Ignition-8.1](https://github.com/CVISupport/RTSP-Ignition-8.1)** instead — same
+> product, built for that platform line. A Gateway runs one or the other; installing the wrong one is
+> harmless (it refuses to start and says so in the Gateway log). License keys and Perspective views
+> work on either.
 
 View live IP-camera **RTSP** streams natively in **Ignition Perspective**. A gateway-managed relay
 repackages each camera's existing stream for the browser — **without re-encoding it** — and plays it
 in an **RTSP Camera Grid** component. No browser plugins, and no transcoding, so image quality is
 untouched and a screen full of cameras costs the Gateway very little.
 
-This repo distributes the **free, limited edition** (up to **6 camera feeds**). Paid tiers lift
+This repo distributes the **free, limited edition for Ignition 8.3+** (up to **6 camera feeds**). Paid tiers lift
 the limit — see [Editions](#editions).
 
 **Two delivery modes.** **HLS** (the default) rides the Gateway's own web port — no extra ports, works
@@ -36,7 +42,8 @@ Subject: CN=Central Valley Ignition, O=Central Valley Ignition, L=Fresno, S=CA, 
 
 ## Requirements
 - **Ignition 8.3+** — standard, **Maker Edition**, or unlicensed trial mode. *(Edge is not supported —
-  IA requires Edge modules to be whitelisted.)*
+  IA requires Edge modules to be whitelisted.)* On **Ignition 8.1**, use the
+  [8.1 build](https://github.com/CVISupport/RTSP-Ignition-8.1) instead.
 - Cameras providing an **H.264** RTSP stream (H.265 must be switched to H.264 on the camera)
 - View camera feeds in a normal **browser** (Chrome/Edge) — this is the supported configuration.
   **Perspective Workstation** can also display them, but does not play H.264 out of the box; see
