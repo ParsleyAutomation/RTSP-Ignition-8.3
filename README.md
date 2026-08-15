@@ -34,26 +34,19 @@ Subject: CN=Central Valley Ignition, O=Central Valley Ignition, L=Fresno, S=CA, 
 
 ---
 
-## Which download
+## Running Ignition 8.1?
 
-There are two builds of the same product. A Gateway runs one or the other — pick by your Ignition
-version:
+This repo is the **Ignition 8.3+** build. For **Ignition 8.1**, use the separate build at
+**[CVISupport/RTSP-Ignition-8.1](https://github.com/CVISupport/RTSP-Ignition-8.1)**.
 
-| Your Ignition | Download | Config page lives under |
-|---|---|---|
-| **8.3 and newer** | `RTSPViewer-Free-*.modl` | Config → Connections → RTSP Cameras |
-| **8.1.5 – 8.1.x** | `RTSPViewer-8.1-Free-*.modl` | Config → Networking → RTSP Cameras |
-
-Both are signed with the same certificate and use the **same license keys** — a key issued for one
-works on the other. Perspective views are interchangeable too: the component and its properties are
-identical, so a view built on 8.1 opens unchanged on 8.3.
-
-Installing the wrong one is harmless — it refuses to start and says so in the Gateway log.
+Same product, same component, same license keys — a Gateway runs one or the other, and installing the
+wrong one is harmless (it refuses to start and says so in the Gateway log). Perspective views built on
+one edition open unchanged on the other.
 
 ## Requirements
-- **Ignition 8.3+** *or* **Ignition 8.1.5+** — standard, **Maker Edition**, or unlicensed trial mode.
-  Each line has its own download; see [Which download](#which-download). *(Edge is not supported —
-  IA requires Edge modules to be whitelisted.)*
+- **Ignition 8.3+** — standard, **Maker Edition**, or unlicensed trial mode. *(Edge is not supported —
+  IA requires Edge modules to be whitelisted.)* For 8.1, see
+  [Running Ignition 8.1?](#running-ignition-81) above.
 - Cameras providing an **H.264** RTSP stream (H.265 must be switched to H.264 on the camera)
 - View camera feeds in a normal **browser** (Chrome/Edge) — this is the supported configuration.
   **Perspective Workstation** can also display them, but does not play H.264 out of the box; see
@@ -62,13 +55,11 @@ Installing the wrong one is harmless — it refuses to start and says so in the 
 ## Install (Gateway)
 1. Gateway web UI → **Config → Modules** → **Install or Upgrade a Module…**
 2. Choose the downloaded `.modl` → **Install** → accept the certificate prompt once.
-3. **On Ignition 8.3+, restart the Gateway** — there, a module install or upgrade only takes effect
-   after a restart. **On 8.1 no restart is needed**; the module starts immediately.
-   Either way it then shows **Running** under Config → Modules.
+3. **Restart the Gateway** — on Ignition 8.3+ a module install or upgrade only takes effect after a
+   restart. The module then shows **Running** under Config → Modules.
 
 ## Add cameras (Gateway)
 1. **Config → Connections → RTSP Cameras** → **+ Create new Camera**.
-   *(On the Ignition 8.1 build this page is under **Config → Networking → RTSP Cameras**.)*
 2. Enter a **Name**, the **RTSP URL** (with any credentials), optional substream/zone.
 3. Save. Camera URLs/credentials stay on the Gateway — never sent to a browser.
 4. Free edition allows **6 enabled cameras**; the 7th is blocked until you upgrade.
