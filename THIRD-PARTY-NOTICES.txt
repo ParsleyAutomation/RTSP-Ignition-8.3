@@ -21,7 +21,7 @@ included in this same folder.
    Source:    https://github.com/video-dev/hls.js
 -------------------------------------------------------------------------------
 
-The RTSP Viewer module itself is (c) Central Valley Ignition. Both bundled
+The RTSP Viewer module itself is (c) Parsley Automation. Both bundled
 components carry permissive licenses (MIT / Apache-2.0) that allow commercial
 redistribution provided their copyright and license notices are retained — which
 is the purpose of this folder.

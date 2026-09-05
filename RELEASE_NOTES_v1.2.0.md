@@ -5,7 +5,7 @@
 - **Paid license keys now activate.** Pro, Unlimited and Integrator tiers work on this build.
   Paste a key into the License card — no reinstall, no Gateway restart, no internet needed.
   Time-limited keys lapse on their expiry date on their own.
-- **Central Valley Ignition splash** when the Designer loads.
+- **Parsley Automation splash** when the Designer loads.
 
 Free Edition behaviour is unchanged. Upgrading from v1.1.x changes nothing about how your cameras
 behave.

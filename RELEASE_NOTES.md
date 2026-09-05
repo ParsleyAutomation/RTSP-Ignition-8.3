@@ -45,7 +45,7 @@ Full walkthrough: **HOWTO.pdf** (attached below).
 - `HOWTO.pdf` — install + configuration guide
 
 ## Upgrade
-More feeds are a license key — no reinstall. Contact **Support@CentralValleyIgnition.com** with
-your Gateway ID (shown on the License card) — www.CentralValleyIgnition.com.
+More feeds are a license key — no reinstall. Contact **Support@parsleyautomation.com** with
+your Gateway ID (shown on the License card) — www.parsleyautomation.com.
 
 _Module version reports as shown in Config → Modules. Use governed by the EULA in this repo._
