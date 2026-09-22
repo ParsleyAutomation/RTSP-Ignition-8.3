@@ -8,7 +8,8 @@ included in this same folder.
 -------------------------------------------------------------------------------
 1) MediaMTX
    Role:      Bundled gateway sidecar that pulls each camera's RTSP(S) feed and
-              remuxes it to HLS (no transcoding). Runs on loopback only.
+              remuxes it to HLS and WebRTC (no transcoding). Its HTTP ports are bound to
+              loopback; the WebRTC media UDP port is bound on all interfaces.
    Copyright: (c) 2019 aler9 and the MediaMTX contributors.
    License:   MIT  ->  mediamtx-LICENSE-MIT.txt
    Source:    https://github.com/bluenviron/mediamtx
